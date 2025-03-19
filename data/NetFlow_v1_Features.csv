@@ -1,0 +1,32 @@
+Feature,Description,Data Type (Original),Data Type (Converted),Valid Range,Notes,Missing %,Long Description
+IPV4_SRC_ADDR,IPv4 source address,Object,Categorical (Convert),0.0.0.0 to 255.255.255.255,32-bit dotted-decimal notation,*   IPV4_SRC_ADDR - IPv4 source address,IPv4 source address
+IPV4_DST_ADDR,IPv4 destination address,Object,Categorical (Convert),0.0.0.0 to 255.255.255.255,32-bit dotted-decimal notation,*   IPV4_DST_ADDR - IPv4 destination address,IPv4 destination address
+L4_SRC_PORT,IPv4 source port number,Numerical,Categorical (Convert),1 to 65535,16-bit unsigned integer,*   L4_SRC_PORT - IPv4 source port number,"TCP/UDP source port number i.e.: FTP, Telnet, or equivalent"
+L4_DST_PORT,IPv4 destination port number,Numerical,Categorical (Convert),1 to 65535,16-bit unsigned integer,*   L4_DST_PORT - IPv4 destination port number,"TCP/UDP destination port number i.e.: FTP, Telnet, or equivalent"
+PROTOCOL,IP protocol identifier byte,Numerical,Categorical (Convert),0 to 255,"Represents different protocols (e.g., 1=ICMP, 6=TCP, 17=UDP)",*   PROTOCOL - IP protocol identifier byte,"IP protocol byte
+1 - ICMP
+2 - IGMP
+6 - TCP
+17 - UDP
+47 - GRE
+58 - IPv6-ICMP"
+TCP_FLAGS,Cumulative of all TCP flags,Numerical,Categorical (Convert),0 (no flags set) to 255 (all flags set),"Combination of flags (e.g., SYN, ACK, FIN, RST)",*   TCP_FLAGS - Cumulative of all TCP flags,"Cumulative of all the TCP flags seen for this flow
+https://www.manitonetworks.com/flow-management/2016/10/16/decoding-tcp-flags"
+L7_PROTO (L7_PROTO_conv),Layer 7 protocol (numeric),Numerical,Categorical (Convert),0 to 421,"Represents application layer protocols (e.g., HTTP, FTP, DNS)
+
+While the L7_PROTO might be assigned numerical values, these numbers are essentially labels or codes that represent different Layer 7 protocols (e.g., HTTP, FTP, DNS).",*   L7_PROTO (L7_PROTO_conv) - Layer 7 protocol (numeric),"Numerical representation of the Layer 7 Protocol Name
+0 - Unknown
+1 - FTP_CONTROL
+2 - POP3
+3 - SMTP
+4 - IMAP
+5 - DNS
+https://www.ntop.org/guides/nprobe/cli_options.html"
+IN_BYTES,Incoming number of bytes,Numerical,Numerical (Continuous),0 or greater,Unsigned integer,*   IN_BYTES - Incoming number of bytes,Incoming counter with length N x 8 bits for number of bytes associated with an IP Flow.
+OUT_BYTES,Outgoing number of bytes,Numerical,Numerical (Continuous),0 or greater,Unsigned integer,*   OUT_BYTES - Outgoing number of bytes,Outgoing counter with length N x 8 bits for the number of bytes associated with an IP Flow
+IN_PKTS,Incoming number of packets,Numerical,Numerical (Continuous),0 or greater,Unsigned integer,*   IN_PKTS - Incoming number of packets,Incoming counter with length N x 8 bits for the number of packets associated with an IP Flow
+OUT_PKTS,Outgoing number of packets,Numerical,Numerical (Continuous),0 or greater,Unsigned integer,*   OUT_PKTS - Outgoing number of packets,Outgoing counter with length N x 8 bits for the number of packets associated with an IP Flow.
+FLOW_DURATION_MILLISECONDS,Flow duration in milliseconds,Numerical,Numerical (Continuous),0 or greater,Unsigned integer,*   FLOW_DURATION_MILLISECONDS - Flow duration in milliseconds,
+Label,Intrusion or not,Numerical,Categorical,0 or 1,,*   Label - Intrusion or not,
+Attack (Attack_simplified),Type of attack,Object,Categorical,,,*   Attack (Attack_simplified) - Type of attack,
+,,,,,,,
