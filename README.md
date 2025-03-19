@@ -1,4 +1,3 @@
-# DANA-4830-Assignment-1
- Cyberattack Prediction
+# Cyberattack Prediction
 
 The goal of this project is to develop a machine learning model to classify cyberattacks using an imbalanced NetFlow-based dataset containing 8 million rows. Univariate feature selection methods, including Chi-square, ANOVA, Mutual Information, ReliefF, and Pearson Correlation were applied, with features combined based on a 60% threshold. The model was built by stratifying the data and applying imbalance handling techniques such as SMOTE, random undersampling, and class weights. Random Forest and XGBoost were used to evaluate performance. Of the 12 combinations tested, the reduced XGBoost model with SMOTE delivered balanced performance, achieving accuracy, precision, and recall above 91%.
